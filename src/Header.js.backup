@@ -1,0 +1,82 @@
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import AppBar from 'material-ui/AppBar';
+import FlatButton from 'material-ui/FlatButton';
+import IconButton from 'material-ui/IconButton';
+import FontIcon from 'material-ui/FontIcon';
+import IconMenu from 'material-ui/svg-icons/navigation/menu';
+import MenuItem from 'material-ui/MenuItem';
+import {redA200} from 'material-ui/styles/colors';
+
+class Header extends Component {
+  render() {
+    return (
+      <MuiThemeProvider>
+        <AppBar
+          class="header-bar"
+          style={headerStyle}
+          iconStyleLeft={headerLeftStyle}
+          iconStyleRight={headerRightStyle}
+          title={
+            <div>
+              <h1><span class="a">A</span><span class="l">l</span>ex Crawford</h1>
+              <FlatButton label="Blog" style={menuButtonStyle} />
+              <FlatButton label="Code" style={menuButtonStyle} />
+            </div>
+          }
+          // iconClassNameLeft="material-icons icon-home"
+          showMenuIconButton={false}
+          style={headerStyle}
+          // iconElementRight={<i class="material-icons md-8">home</i>}
+          iconElementRight={
+            <IconButton style={iconButtonStyle}>
+              <IconMenu style={iconStyle} color={redA200} />
+            </IconButton>
+          }
+        />
+      </MuiThemeProvider>
+    );
+  }
+}
+
+export default Header;
+
+const headerStyle = {
+  // 'padding': 0,
+  height: '32px',
+  'line-height': '32px',
+  'padding': 0,
+  'background-color': '#222'
+}
+
+const headerLeftStyle = {
+  // height: 'auto',
+  'line-height': '32px'
+}
+
+const headerRightStyle = {
+  'margin': 0
+  // 'max-height': '32px',
+  // 'max-width': '32px',
+}
+
+const iconButtonStyle = {
+  padding: 0,
+  height: '32px',
+  width: '32px'
+}
+
+const iconStyle = {
+  color: '#fff'
+}
+
+const menuButtonStyle = {
+  color: redA200,
+  'line-height': '32px',
+  height: '32px',
+  'font-size': '12px',
+  padding: 0
+}

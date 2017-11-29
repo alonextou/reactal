@@ -3,3 +3,33 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+div.header-bar > div {
+  line-height: 32px !important;
+  height: 32px !important;
+}
+
+.header-bar h1 {
+  margin: 0;
+  letter-spacing: 2px;
+  font-size: 4vw;
+  color: #FF5252;
+  display: inline;
+  float: left;
+}
+
+.header-bar h1 span.a {
+  display: inline-block;
+  background: #FF5252;
+  color: #fff;
+  padding: 0 3px;
+  margin-right: 3px;
+}
+
+.header-bar h1 span.l {
+  color: #FF5252;
+}
+
+.header-bar svg {
+  // width: auto;
+}
